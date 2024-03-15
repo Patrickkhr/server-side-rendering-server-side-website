@@ -33,6 +33,8 @@ Voor dit project is het de bedoeling dat wij ons richten op kinderen van 0-1 jaa
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+Fork deze leertaak en clone het naar je systeem.
+Installeer de Node ontwikkelomgeving en installeer de packages die je nodig hebt. 
 
 
 ## Bronnen
