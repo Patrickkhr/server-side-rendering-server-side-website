@@ -39,12 +39,12 @@ Installeer de Node ontwikkelomgeving en installeer de packages die je nodig hebt
 
 ## Bronnen
 
-[Prototype design TuMi Mundo](https://www.figma.com/file/RDlD4etdXBvcOW9AAqueBz/TuMiMundo_FDND_Prototype?type=design&node-id=0-1&mode=design&t=NvjIgXrZ2n4fxpY1-0)
+[Prototype design TuMi Mundo](https://www.figma.com/file/RDlD4etdXBvcOW9AAqueBz/TuMiMundo_FDND_Prototype?type=design&node-id=0-1&mode=design&t=NvjIgXrZ2n4fxpY1-0)  
 [Opdrachtomschrijving](https://github.com/fdnd-agency/tumi-mundo)
 
-https://docs.directus.io/reference/introduction.html
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
-https://ejs.co
+https://docs.directus.io/reference/introduction.html  
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON  
+https://ejs.co  
 
 ## Licentie
 
