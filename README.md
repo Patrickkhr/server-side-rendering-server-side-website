@@ -30,6 +30,11 @@ Voor dit project is het de bedoeling dat wij ons richten op kinderen van 0-1 jaa
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+De gebruikte technieken:
+* HTML
+* CSS
+* JS
+* EJS
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
