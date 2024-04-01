@@ -26,6 +26,7 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }));
 
 
+
 /*** Routes & data ***/
 const storyData = await fetchJson(apiUrl + '/tm_story')
 
@@ -45,15 +46,43 @@ app.get('/lessons', function(request, response) {
     response.render('lessons', {stories: storyData.data, 
       language: languageData.data,
       playlist: playlistData.data,
-      audio: audioData.data})
+      audio: audioData.data,
+      likes: likes
+    })
   });
 })
 
-app.get('/lessons/:id', function(request, response){
-  fetchJson('https://fdnd-agency.directus.app/items/tm_story?filter={"id":' + request.params.id + '}').then((storyData) => {
-    response.render('lessons', {stories: storyData.data})
+app.get('/all-stories', function(request, response) {
+  Promise.all([
+  fetchJson('https://fdnd-agency.directus.app/items/tm_story'),
+  fetchJson('https://fdnd-agency.directus.app/items/tm_language')]).then(([storyData, languageData]) => {
+    response.render('all-stories', {
+      stories: storyData.data,
+      language: languageData.data
+    })
   });
 })
+
+// Maak een POST route voor het verwerken van like/unlike acties
+
+let likes = {}
+
+app.post('/:playlistId/like-or-unlike', function(request, response) {
+    const playlistId = Number(request.params.playlistId);
+    const action = request.body.action; // Retrieve the value of the 'actie' parameter from the form
+  console.log(action, playlistId)
+    // Implement the logic to handle liking or unliking the playlist
+    if (action === 'liked') {
+      // Handle 'like' action
+      likes[playlistId] = true
+  
+    } else if (action === 'unliked') {
+      likes[playlistId] = false
+  
+    } 
+    response.redirect(303, '/lessons')
+    })
+
 
 // 3. Start de webserver
 // Stel het poortnummer in waar express op moet gaan luisteren
